@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="id">
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -443,33 +443,33 @@ const PRODUCTS = [
   {id:1, nama:"Dress Linen Midi", 
   kategori:"wanita", sub:"Dress",
   harga:285000,
-  gambar:"img/midi.jpg", 
+  gambar:"https://images.unsplash.com/photo-1721990336298-90832e791b5a?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
   ukuran:["XS","S","M","L"],
   warna:[["Krem","#E8DCC8"],["Hitam","#222"],["Terracotta","#C77B58"]],
   deskripsi:"Dress midi berbahan linen premium, potongan A-line yang nyaman untuk aktivitas sehari-hari maupun acara santai. Jatuh kain lembut dan breathable.", tag:"Baru"},
-  {id:2, nama:"Blouse Satin", kategori:"wanita", sub:"Blouse", harga:175000,
-  gambar:"img/blouse-satin.jpg.jpg", ukuran:["S","M","L","XL"], warna:[["Putih","#FAFAFA"],["Dusty Pink","#D9A9A0"],["Navy","#22304A"]], deskripsi:"Blouse satin dengan detail tali leher, cocok dipadukan dengan rok maupun celana formal. Tekstur lembut berkilau halus.", tag:"Favorit"},
+  {id:2, nama:"Blazer", kategori:"wanita", sub:"Blouse", harga:175000,
+  gambar:"https://images.unsplash.com/photo-1571513722275-4b41940f54b8?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", ukuran:["S","M","L","XL"], warna:[["Krem","#E8DCC8"],["Dusty Pink","#D9A9A0"],["Navy","#22304A"]], deskripsi:"Setelan blazer premium dengan potongan formal yang clean dan elegan. Menggunakan bahan berkualitas tinggi yang tegak namun tetap nyaman dipakai seharian. Dilengkapi detail kerah ganda yang kontras untuk memberikan kesan mewah, profesional, dan berkelas. Sangat cocok untuk acara formal, meeting bisnis, maupun tampilan semi-formal yang bold.", tag:"Favorit"},
   {id:3, nama:"Kemeja Wanita Oversized", kategori:"wanita", sub:"Kemeja", harga:165000,
   gambar:"https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?q=80&w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?q=80&w=600&auto=format&fit=crop)",
   ukuran:["S","M","L","XL"], warna:[["Putih","#FAFAFA"],["Biru Muda","#AFC8DC"],["Abu-abu","#A9A9A2"]], deskripsi:"Kemeja oversized dengan bahan katun ringan, desain unisex-fit yang fleksibel untuk gaya kasual maupun semi-formal.", tag:null},
-  {id:4, nama:"Rok Plisket Midi", kategori:"wanita", sub:"Rok", harga:195000,
-  gambar:"img/rokpris.jpg", ukuran:["S","M","L"], warna:[["Hitam","#222"],["Khaki","#BBA875"],["Maroon","#6E2E33"]], deskripsi:"Rok plisket dengan jatuh kain yang anggun, pinggang elastis untuk kenyamanan ekstra sepanjang hari.", tag:null},
+  {id:4, nama:"Rok Plisket", kategori:"wanita", sub:"Rok", harga:195000,
+  gambar:"https://unsplash.com/id/foto/wanita-dengan-gaun-lengan-panjang-putih-dan-hitam-berdiri-di-trotoar-di-siang-hari-UW8ga6uDGL0", ukuran:["S","M","L"], warna:[["Hitam","#222"],["Khaki","#BBA875"],["Maroon","#6E2E33"]], deskripsi:"Rok plisket dengan jatuh kain yang anggun, pinggang elastis untuk kenyamanan ekstra sepanjang hari.", tag:null},
   {id:5, nama:"Celana Kulot Wanita", kategori:"wanita", sub:"Celana", harga:155000,
-  gambar:"img/celanakulot.jpg", ukuran:["S","M","L","XL"], warna:[["Hitam","#222"],["Krem","#E8DCC8"],["Navy","#22304A"]], deskripsi:"Celana kulot longgar dengan bahan jatuh, sangat nyaman dipakai untuk aktivitas harian maupun bekerja.", tag:"Diskon"},
+  gambar:"https://plus.unsplash.com/premium_photo-1689371952452-c88c72464115?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", ukuran:["S","M","L","XL"], warna:[["Hitam","#222"],["Krem","#E8DCC8"],["Navy","#22304A"]], deskripsi:"Celana kulot longgar dengan denim, sangat nyaman dipakai untuk aktivitas harian maupun bekerja.", tag:"Diskon"},
   {id:6, nama:"Dress Wrap Floral", kategori:"wanita", sub:"Dress", harga:245000,
-  gambar:"img/DressFloral.jpg", ukuran:["XS","S","M","L"], warna:[["Floral Krem","#E3D8C2"],["Floral Navy","#283449"]], deskripsi:"Dress model wrap dengan motif floral lembut, siluet feminin yang flattering untuk berbagai bentuk tubuh.", tag:null},
+  gambar:"https://images.unsplash.com/photo-1616313253719-c46514cddee1?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", ukuran:["XS","S","M","L"], warna:[["Floral Krem","#E3D8C2"],["Floral Navy","#283449"]], deskripsi:"Dress model wrap dengan motif floral lembut, siluet feminin yang flattering untuk berbagai bentuk tubuh.", tag:null},
 
   // ---- PRIA ----
   {id:7, nama:"Kemeja Casual Pria", kategori:"pria", sub:"Kemeja", harga:150000,
-  gambar:"https://images.unsplash.com/photo-1603252109303-2751441dd157?q=80&w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1603252109303-2751441dd157?q=80&w=600&auto=format&fit=crop)", ukuran:["XS","S","M","L","XL","XXL"], warna:[["Hitam","#222"],["Putih","#FAFAFA"],["Navy","#22304A"],["Abu-abu","#8C8A86"]], deskripsi:"Bahan premium, nyaman dipakai sehari-hari. Cutting modern slim-fit dengan jahitan rapi dan material breathable sepanjang hari.", tag:"Favorit"},
+  gambar:"https://unsplash.com/id/foto/kemeja-biru-tergantung-di-dinding-putih-vcTKFYNZop4", ukuran:["XS","S","M","L","XL","XXL"], warna:[["Hitam","#222"],["Putih","#FAFAFA"],["Navy","#22304A"],["Abu-abu","#8C8A86"]], deskripsi:"Bahan premium, nyaman dipakai sehari-hari. Cutting modern slim-fit dengan jahitan rapi dan material breathable sepanjang hari.", tag:"Favorit"},
   {id:8, nama:"Kaos Polos Premium", kategori:"pria", sub:"Kaos", harga:95000,
-  gambar:"img/KaosPolos.jpg", ukuran:["S","M","L","XL","XXL"], warna:[["Hitam","#222"],["Putih","#FAFAFA"],["Abu-abu","#8C8A86"]], deskripsi:"Kaos berbahan cotton combed 30s, tebal namun tetap sejuk dipakai. Pilihan dasar yang wajib ada di lemari.", tag:null},
+  gambar:"https://unsplash.com/id/foto/kaos-putih-tergantung-di-dinding-di-sebelah-tanaman-3fXs48dBpH4", ukuran:["S","M","L","XL","XXL"], warna:[["Hitam","#222"],["Putih","#FAFAFA"],["Abu-abu","#8C8A86"]], deskripsi:"Kaos berbahan cotton combed 30s, tebal namun tetap sejuk dipakai. Pilihan dasar yang wajib ada di lemari.", tag:null},
   {id:9, nama:"Jaket Bomber Pria", kategori:"pria", sub:"Jaket", harga:320000,
   gambar:"https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=600&auto=format&fit=crop)", ukuran:["M","L","XL","XXL"], warna:[["Hitam","#222"],["Olive","#6B6E4E"]], deskripsi:"Jaket bomber dengan lapisan dalam hangat, ritsleting berkualitas dan saku fungsional untuk gaya urban.", tag:"Baru"},
   {id:10, nama:"Celana Chino Slim", kategori:"pria", sub:"Celana", harga:185000,
-  gambar:"img/CelanaSlim.jpg", ukuran:["S","M","L","XL"], warna:[["Khaki","#BBA875"],["Hitam","#222"],["Navy","#22304A"]], deskripsi:"Celana chino slim-fit dengan bahan stretch ringan, nyaman dipakai kerja maupun santai.", tag:null},
+  gambar:"https://unsplash.com/id/foto/pria-dengan-t-shirt-putih-dan-celana-hitam-berdiri-di-lantai-putih-ylHcWlrMlzs", ukuran:["S","M","L","XL"], warna:[["Khaki","#BBA875"],["Hitam","#222"],["Navy","#22304A"]], deskripsi:"Celana chino slim-fit dengan bahan stretch ringan, nyaman dipakai kerja maupun santai.", tag:null},
   {id:11, nama:"Hoodie Basic Pria", kategori:"pria", sub:"Hoodie", harga:210000,
-  gambar:"img/Hoodie.jpg", ukuran:["S","M","L","XL","XXL"], warna:[["Hitam","#222"],["Abu-abu","#8C8A86"],["Maroon","#6E2E33"]], deskripsi:"Hoodie dengan fleece tebal di bagian dalam, hangat dan nyaman untuk cuaca dingin maupun gaya kasual harian.", tag:"Diskon"},
+  gambar:"https://unsplash.com/id/foto/seorang-pria-berhoodie-jumat-berpose-untuk-berfoto-aeNyM3wvlvs", ukuran:["S","M","L","XL","XXL"], warna:[["Hitam","#222"],["Abu-abu","#8C8A86"],["Maroon","#6E2E33"]], deskripsi:"Hoodie dengan fleece tebal di bagian dalam, hangat dan nyaman untuk cuaca dingin maupun gaya kasual harian.", tag:"Diskon"},
   {id:12, nama:"Sepatu Sneakers Canvas", kategori:"pria", sub:"Sepatu", harga:275000,
   gambar:"https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=600&auto=format&fit=crop)", ukuran:["39","40","41","42","43","44"], warna:[["Putih","#FAFAFA"],["Hitam","#222"]], deskripsi:"Sneakers canvas dengan sol karet anti-slip, ringan dan cocok dipadukan dengan berbagai outfit kasual.", tag:null},
 ];
