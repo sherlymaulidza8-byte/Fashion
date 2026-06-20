@@ -705,6 +705,19 @@ function categoryBanner(key, title, sub){
 
 
 /* ============ RENDER: CATEGORY PAGE ============ */
+function productCard(p) {
+    return `
+    <div class="product-card" onclick="openProduct(${p.id})" style="cursor: pointer; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: transform 0.2s;">
+        <div class="product-img-wrapper" style="height: 320px; overflow: hidden; position: relative;">
+            <img src="${p.gambar}" alt="${p.nama}" class="product-img" style="width: 100%; height: 100%; object-fit: cover;">
+            ${p.tag ? `<span class="badge" style="position: absolute; top: 10px; left: 10px; background: #b8860b; color: #fff; padding: 4px 8px; font-size: 12px; font-weight: bold; border-radius: 4px;">${p.tag}</span>` : ''}
+        </div>
+        <div class="product-info" style="padding: 15px; text-align: left;">
+            <h3 style="margin: 0 0 8px 0; font-size: 16px; color: #333; font-weight: 500;">${p.nama}</h3>
+            <div class="price" style="font-weight: bold; color: #111; font-size: 15px;">${fmt(p.harga)}</div>
+        </div>
+    </div>`;
+}
 function renderCategory(kategori){
   const title = kategori==='wanita' ? 'Fashion Wanita' : 'Fashion Pria';
   const subs = [...new Set(PRODUCTS.filter(p=>p.kategori===kategori).map(p=>p.sub))];
@@ -727,6 +740,7 @@ function renderCategory(kategori){
     </div>
   </section>`;
 }
+
 function setFilter(f){ state.filter = f; render(); }
 
 /* ============ RENDER: PRODUCT DETAIL ============ */
