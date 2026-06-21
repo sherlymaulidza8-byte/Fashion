@@ -1,29 +1,37 @@
-<!DOCTYPE html>
 <html lang="id">
 <head>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Auric — Fashion Shop</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1A1A1A;
-    --bg:#FAF8F5;
+    --ink:#574d02;
+    --bg:#e9b76d;
     --gold:#C9A876;
-    --gold-deep:#A8855A;
-    --surface:#FFFFFF;
+    --gold-deep:#ee8607;
+    --surface:#e6b57aec;
     --line:#E8E3DC;
     --pine:#2D5A4A;
     --pine-bg:#EAF1ED;
     --muted:#8A8378;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
+  html, body{
+    overflow-x:hidden;
+    width:100%; height:100%;
+  }
+  img{
+    max-width:100%;
+    height: auto;
+    display:block;
+  }
   html{scroll-behavior:smooth;}
   body{
     font-family:'Inter',sans-serif;
-    background:var(--bg);
+    background:var(--pine-bg);
     color:var(--ink);
     -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
@@ -42,13 +50,47 @@
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
   }
+ /* Samakan menu navigasi agar berbentuk oval seperti tombol keranjang */
+.nav-link, .main-nav a, .nav-menu a { 
+    display: block;
+    background-color: var(--gold-deep); /* Warna putih padat */
+    color: var(--ink) !important;      /* Warna teks gelap */
+    padding: 10px 24px;               /* Lebar padding kanan-kiri ditambah sedikit */
+    margin: 10px 0;
+    
+    /* KUNCI UTAMA: Ubah border-radius menjadi nilai besar agar melengkung bulat (oval) */
+    border-radius: 50px;              
+    
+    /* Berikan border tipis abu-abu agar sama persis seperti tombol keranjang */
+    border: 1px solid rgba(216, 81, 81, 0.15); 
+    
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+  .cart-btn, button.cart-btn {
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 4px 6px rgba(201, 200, 195, 0);
+}
+
+
+/* Efek Hover (Saat kursor menyentuh menu Beranda, dll) */
+.nav-link:hover, .main-nav a:hover, .nav-menu a:hover {
+    background-color: var(--pine-bg);    /* Berubah menjadi warna emas */
+    color: var(--surface) !important; /* Teks berubah menjadi putih */
+    border-color: var(--pine);
+}
+
+/* ----------------------------------- */
 
   /* ===== HEADER ===== */
   header{
     position:sticky; top:0; z-index:50;
-    background:rgba(250,248,245,0.92);
+    background:rgba(175, 121, 21, 0.349);
     backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
+    border-bottom:1px solid var(--pine-bg);
   }
   .header-inner{
     max-width:1200px; margin:0 auto;
@@ -81,7 +123,7 @@
   .cart-btn:hover{background:var(--ink); color:var(--bg);}
   .cart-count{
     position:absolute; top:-7px; right:-7px;
-    background:var(--gold-deep); color:#fff;
+    background:var(--gold-deep); color:#f3f1ed;
     font-size:11px; font-weight:700; width:19px; height:19px;
     border-radius:50%; display:flex; align-items:center; justify-content:center;
   }
@@ -136,7 +178,7 @@
   }
   .hero-visual .frame-label{
     position:absolute; bottom:20px; left:20px; right:20px;
-    background:rgba(255,255,255,0.85); backdrop-filter:blur(6px);
+    background:rgba(177, 147, 91, 0.658); backdrop-filter:blur(6px);
     padding:14px 18px; border-radius:2px; font-size:12px;
     display:flex; justify-content:space-between; align-items:center;
   }
@@ -183,7 +225,7 @@
   
   .card-img{
     position:relative; aspect-ratio:3/4; border-radius:3px; overflow:hidden;
-    background:#EFEAE2; margin-bottom:14px;
+    background:#f8f7f5; margin-bottom:14px;
   }
   .card-img svg{width:100%; height:100%; transition:transform .5s ease;}
   .card:hover .card-img svg{transform:scale(1.06);}
@@ -249,7 +291,7 @@
     display:flex; align-items:center; justify-content:center; position:relative; cursor:pointer;
   }
   .color-opt.active{border-color:var(--gold-deep);}
-  .color-swatch{width:26px; height:26px; border-radius:50%; border:1px solid rgba(0,0,0,0.1);}
+  .color-swatch{width:26px; height:26px; border-radius:50%; border:1px solid rgba(172, 165, 165, 0);}
 
   .qty-row{display:flex; align-items:center; gap:0; width:fit-content; border:1px solid var(--line); border-radius:2px;}
   .qty-btn{width:42px; height:42px; font-size:18px; color:var(--muted); transition:color .15s;}
@@ -338,7 +380,7 @@
     border:1px solid var(--line); border-radius:2px; padding:8px 12px; font-size:12px; font-weight:600;
     color:var(--muted); transition:all .15s;
   }
-  .bank-chip.active{border-color:var(--gold-deep); color:var(--gold-deep); background:#fff;}
+  .bank-chip.active{border-color:var(--pine); color:var(--pine); background:#fff;}
 
   .summary-box{
     background:var(--surface); border:1px solid var(--line); border-radius:6px; padding:26px;
@@ -395,6 +437,19 @@
   footer{border-top:1px solid var(--line); padding:40px 32px; text-align:center; color:var(--muted); font-size:12.5px; margin-top:40px;}
 
   .hide{display:none !important;}
+  .nav-link { 
+    display: block;
+    background-color: var(--surface); 
+    color: var(--ink) !important;      
+    padding: 10px 24px;               
+    margin: 10px 0;
+    border-radius: 50px; /* Ini yang bikin tombolnya lonjong oval melengkung seperti keranjang */             
+    border: 1px solid rgba(3, 3, 3, 0.205); 
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
   .view{animation:fadeIn .35s ease;}
   @keyframes fadeIn{from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:translateY(0);}}
 </style>
@@ -419,7 +474,7 @@
 <main id="app"></main>
 
 <footer>
-  © 2026 Auric Fashion —, Dibuat Oleh Sherly, Untuk Belanja Fashion Favorite Anda.
+  © 2026 Auric Fashion — Belanja Fashion Favorite Anda.
 </footer>
 
 <!-- CART DRAWER -->
@@ -453,7 +508,7 @@ const PRODUCTS = [
   gambar:"https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?q=80&w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?q=80&w=600&auto=format&fit=crop)",
   ukuran:["S","M","L","XL"], warna:[["Putih","#FAFAFA"],["Biru Muda","#AFC8DC"],["Abu-abu","#A9A9A2"]], deskripsi:"Kemeja oversized dengan bahan katun ringan, desain unisex-fit yang fleksibel untuk gaya kasual maupun semi-formal.", tag:null},
   {id:4, nama:"Rok Plisket", kategori:"wanita", sub:"Rok", harga:195000,
-  gambar:"https://unsplash.com/id/foto/wanita-dengan-gaun-lengan-panjang-putih-dan-hitam-berdiri-di-trotoar-di-siang-hari-UW8ga6uDGL0", ukuran:["S","M","L"], warna:[["Hitam","#222"],["Khaki","#BBA875"],["Maroon","#6E2E33"]], deskripsi:"Rok plisket dengan jatuh kain yang anggun, pinggang elastis untuk kenyamanan ekstra sepanjang hari.", tag:null},
+  gambar:"https://images.unsplash.com/photo-1591948083708-6edc852d7275?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", ukuran:["S","M","L"], warna:[["Hitam","#222"],["Khaki","#BBA875"],["Maroon","#6E2E33"]], deskripsi:"Rok plisket dengan jatuh kain yang anggun, pinggang elastis untuk kenyamanan ekstra sepanjang hari.", tag:null},
   {id:5, nama:"Celana Kulot Wanita", kategori:"wanita", sub:"Celana", harga:155000,
   gambar:"https://plus.unsplash.com/premium_photo-1689371952452-c88c72464115?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", ukuran:["S","M","L","XL"], warna:[["Hitam","#222"],["Krem","#E8DCC8"],["Navy","#22304A"]], deskripsi:"Celana kulot longgar dengan denim, sangat nyaman dipakai untuk aktivitas harian maupun bekerja.", tag:"Diskon"},
   {id:6, nama:"Dress Wrap Floral", kategori:"wanita", sub:"Dress", harga:245000,
@@ -461,15 +516,15 @@ const PRODUCTS = [
 
   // ---- PRIA ----
   {id:7, nama:"Kemeja Casual Pria", kategori:"pria", sub:"Kemeja", harga:150000,
-  gambar:"https://unsplash.com/id/foto/kemeja-biru-tergantung-di-dinding-putih-vcTKFYNZop4", ukuran:["XS","S","M","L","XL","XXL"], warna:[["Hitam","#222"],["Putih","#FAFAFA"],["Navy","#22304A"],["Abu-abu","#8C8A86"]], deskripsi:"Bahan premium, nyaman dipakai sehari-hari. Cutting modern slim-fit dengan jahitan rapi dan material breathable sepanjang hari.", tag:"Favorit"},
+  gambar:"https://images.unsplash.com/photo-1740711152088-88a009e877bb?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", ukuran:["XS","S","M","L","XL","XXL"], warna:[["Hitam","#222"],["Putih","#FAFAFA"],["Navy","#22304A"],["Abu-abu","#8C8A86"]], deskripsi:"Bahan premium, nyaman dipakai sehari-hari. Cutting modern slim-fit dengan jahitan rapi dan material breathable sepanjang hari.", tag:"Favorit"},
   {id:8, nama:"Kaos Polos Premium", kategori:"pria", sub:"Kaos", harga:95000,
-  gambar:"https://unsplash.com/id/foto/kaos-putih-tergantung-di-dinding-di-sebelah-tanaman-3fXs48dBpH4", ukuran:["S","M","L","XL","XXL"], warna:[["Hitam","#222"],["Putih","#FAFAFA"],["Abu-abu","#8C8A86"]], deskripsi:"Kaos berbahan cotton combed 30s, tebal namun tetap sejuk dipakai. Pilihan dasar yang wajib ada di lemari.", tag:null},
+  gambar:"https://plus.unsplash.com/premium_photo-1718913936342-eaafff98834b?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", ukuran:["S","M","L","XL","XXL"], warna:[["Hitam","#222"],["Putih","#FAFAFA"],["Abu-abu","#8C8A86"]], deskripsi:"Kaos berbahan cotton combed 30s, tebal namun tetap sejuk dipakai. Pilihan dasar yang wajib ada di lemari.", tag:null},
   {id:9, nama:"Jaket Bomber Pria", kategori:"pria", sub:"Jaket", harga:320000,
   gambar:"https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=600&auto=format&fit=crop)", ukuran:["M","L","XL","XXL"], warna:[["Hitam","#222"],["Olive","#6B6E4E"]], deskripsi:"Jaket bomber dengan lapisan dalam hangat, ritsleting berkualitas dan saku fungsional untuk gaya urban.", tag:"Baru"},
   {id:10, nama:"Celana Chino Slim", kategori:"pria", sub:"Celana", harga:185000,
-  gambar:"https://unsplash.com/id/foto/pria-dengan-t-shirt-putih-dan-celana-hitam-berdiri-di-lantai-putih-ylHcWlrMlzs", ukuran:["S","M","L","XL"], warna:[["Khaki","#BBA875"],["Hitam","#222"],["Navy","#22304A"]], deskripsi:"Celana chino slim-fit dengan bahan stretch ringan, nyaman dipakai kerja maupun santai.", tag:null},
+  gambar:"https://images.unsplash.com/photo-1584865288642-42078afe6942?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", ukuran:["S","M","L","XL"], warna:[["Khaki","#BBA875"],["Hitam","#222"],["Navy","#22304A"]], deskripsi:"Celana chino slim-fit dengan bahan stretch ringan, nyaman dipakai kerja maupun santai.", tag:null},
   {id:11, nama:"Hoodie Basic Pria", kategori:"pria", sub:"Hoodie", harga:210000,
-  gambar:"https://unsplash.com/id/foto/seorang-pria-berhoodie-jumat-berpose-untuk-berfoto-aeNyM3wvlvs", ukuran:["S","M","L","XL","XXL"], warna:[["Hitam","#222"],["Abu-abu","#8C8A86"],["Maroon","#6E2E33"]], deskripsi:"Hoodie dengan fleece tebal di bagian dalam, hangat dan nyaman untuk cuaca dingin maupun gaya kasual harian.", tag:"Diskon"},
+  gambar:"https://plus.unsplash.com/premium_photo-1727967189498-fb2c7d0a1e30?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", ukuran:["S","M","L","XL","XXL"], warna:[["Hitam","#222"],["Abu-abu","#8C8A86"],["Maroon","#6E2E33"]], deskripsi:"Hoodie dengan fleece tebal di bagian dalam, hangat dan nyaman untuk cuaca dingin maupun gaya kasual harian.", tag:"Diskon"},
   {id:12, nama:"Sepatu Sneakers Canvas", kategori:"pria", sub:"Sepatu", harga:275000,
   gambar:"https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=600&auto=format&fit=crop)", ukuran:["39","40","41","42","43","44"], warna:[["Putih","#FAFAFA"],["Hitam","#222"]], deskripsi:"Sneakers canvas dengan sol karet anti-slip, ringan dan cocok dipadukan dengan berbagai outfit kasual.", tag:null},
 ];
@@ -506,7 +561,7 @@ function productSVG(p, big=false){
 
 /* ============ ROUTER ============ */
 function navigate(e, page){
-  if(e) e.preventDefault();
+  if(e) { e.preventDefault(); }
   state.page = page;
   state.filter = 'semua';
   document.getElementById('mainNav').classList.remove('open');
@@ -919,7 +974,9 @@ function renderCheckout(){
         ${state.cart.map(item=>{
           const p = PRODUCTS.find(pr=>pr.id===item.productId);
           return `<div class="summary-item">
-            <div class="summary-item-img">${productSVG(p)}</div>
+            <div class="summary-item-img">
+    <img src="${p.gambar}" alt="${p.nama}" style="width: 60px; height: 60px; object-fit: cover; border-radius: 6px;">
+</div>
             <div class="summary-item-info">
               <div class="summary-item-name">${p.nama}</div>
               <div class="summary-item-meta">${item.size} · ${item.color} · ${item.qty}x</div>
@@ -930,7 +987,8 @@ function renderCheckout(){
         <div class="summary-row"><span>Subtotal</span><span>${fmt(total)}</span></div>
         <div class="summary-row"><span>Ongkir</span><span>${fmt(SHIPPING_COST)}</span></div>
         <div class="summary-row total"><span>Total Bayar</span><span>${fmt(grandTotal)}</span></div>
-        <button class="btn-primary order-btn" onclick="submitOrder()">✅ Pesan Sekarang</button>
+        <button class="btn-pesan" onclick="event.preventDefault(); prosespesan();">✅ Pesan Sekarang</button>
+        <button onclick="navigate(event, 'checkout')">Kembali</button>
         <div class="secure-note">🔒 Transaksi demo — tidak ada data nyata yang dikirim</div>
       </div>
     </div>
