@@ -650,8 +650,9 @@ function renderCartDrawer(){
   body.innerHTML = state.cart.map((item,idx)=>{
     const p = PRODUCTS.find(pr=>pr.id===item.productId);
     return `<div class="cart-item">
-      <div class="cart-item-img">${productSVG(p)}</div>
-      <div class="cart-item-info">
+      <div class="cart-item-img">
+    <img src="${p.gambar}" alt="${p.nama}" style="width: 70px; height: 88px; object-fit: cover; border-radius: 4px;">
+</div> 
         <div class="cart-item-name">${p.nama}</div>
         <div class="cart-item-meta">Ukuran ${item.size} · ${item.color}</div>
         <div class="cart-item-row">
